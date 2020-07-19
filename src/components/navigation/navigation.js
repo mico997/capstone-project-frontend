@@ -1,61 +1,85 @@
 import React from 'react';
 import { NavLink } from "react-router-dom";
 
-export default function Navigation (props) {
+export default function Navigation() {
    return (
-       <div>
-           <div>
-               <NavLink exact to="/">
-                   Home
-               </NavLink>
+       <div className="nav-wrapper">
+           <div className="left-side">
+                <div className="nav-link-wrapper">
+                    <NavLink exact to="/" activeClassName="active-nav-link">
+                        Home
+                    </NavLink>
+                </div>
+
+                <div className="nav-link-wrapper">
+                    <NavLink to="/about" activeClassName="active-nav-link">
+                        About
+                    </NavLink>
+                </div>
+                
+                <div className="nav-link-wrapper">
+                    <NavLink to="/electronics" activeClassName="active-nav-link">
+                        Electronics
+                    </NavLink>
+                </div>
+
+                <div className="nav-link-wrapper">
+                    <NavLink to="/n95mask" activeClassName="active-nav-link">
+                        N95 Mask
+                    </NavLink>
+                </div>
+
+                <div className="nav-link-wrapper">
+                    <NavLink to="/login" activeClassName="active-nav-link">
+                        Login
+                    </NavLink>
+                </div>
+
+                <div className="nav-link-wrapper">
+                    <NavLink to="/register" activeClassName="active-nav-link">
+                        Register
+                    </NavLink>
+                </div>
+
+                <div className="nav-link-wrapper">
+                    <NavLink to="/cart" activeClassName="active-nav-link">
+                        Cart
+                    </NavLink>
+                </div>
+
+                <div className="nav-link-wrapper">
+                    <NavLink to="/my-account" activeClassName="active-nav-link">
+                        My-Account
+                    </NavLink>
+                </div>
+
+                <div className="nav-link-wrapper">
+                    <NavLink to="/notifications" activeClassName="active-nav-link"> 
+                        Notification
+                    </NavLink>
+                </div>
+
+                <div className="nav-link-wrapper">
+                    <NavLink to="/sell" activeClassName="active-nav-link">
+                        Sell
+                    </NavLink>
+                </div>
            </div>
 
-           <div>
-               <NavLink to="/about">
-                   About
-               </NavLink>
+           <div className="right-side">
+               <div>
+                   <h1>Mike Vidal</h1>
+               </div>
+
+               <div>
+                   <button>Sign Up</button>
+               </div>
+
+               <div>
+                   <button>Log In</button>
+               </div>
+
            </div>
-           <div>
-               <NavLink to="/electronics">
-                   Electronics
-               </NavLink>
-           </div>
-           <div>
-               <NavLink to="/n95mask">
-                   N95 Mask
-               </NavLink>
-           </div>
-           <div>
-               <NavLink to="/login">
-                   Login
-               </NavLink>
-           </div>
-           <div>
-               <NavLink to="/register">
-                   Register
-               </NavLink>
-           </div>
-           <div>
-               <NavLink to="/cart">
-                   Cart
-               </NavLink>
-           </div>
-           <div>
-               <NavLink to="/my-account">
-                   My-Account
-               </NavLink>
-           </div>
-           <div>
-               <NavLink to="/notifications">
-                   Notification
-               </NavLink>
-           </div>
-           <div>
-               <NavLink to="/sell">
-                   Sell
-               </NavLink>
-           </div>
-           
-       </div>
-   )
+        </div>
+    )
 }

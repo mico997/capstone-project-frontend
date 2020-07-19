@@ -17,10 +17,10 @@ export default class App extends Component {
   render() {
     return (
       <div className='container'>
+        {this.state.LoggedInStatus}
         <BrowserRouter>
 
           <h1>Welcome to My Shopping Website. Hope you get a great user-experience!</h1>
-          <h2>React Redux Router</h2>
           <Navigation />
           <Content />
           
