@@ -30,18 +30,6 @@ export default function Navigation() {
                 </div>
 
                 <div className="nav-link-wrapper">
-                    <NavLink to="/login" activeClassName="active-nav-link">
-                        Login
-                    </NavLink>
-                </div>
-
-                <div className="nav-link-wrapper">
-                    <NavLink to="/register" activeClassName="active-nav-link">
-                        Register
-                    </NavLink>
-                </div>
-
-                <div className="nav-link-wrapper">
                     <NavLink to="/cart" activeClassName="active-nav-link">
                         Cart
                     </NavLink>
@@ -64,12 +52,21 @@ export default function Navigation() {
                         Sell
                     </NavLink>
                 </div>
+
+                <div className="nav-link-wrapper">
+                    <NavLink to="/login" activeClassName="active-nav-link">
+                        Login
+                    </NavLink>
+                </div>
+
+                <div className="nav-link-wrapper">
+                    <NavLink to="/register" activeClassName="active-nav-link">
+                        Register
+                    </NavLink>
+                </div>
            </div>
 
            <div className="right-side">
-               <div>
-                   <h1>Mike Vidal</h1>
-               </div>
 
                <div>
                    <button>Sign Up</button>
