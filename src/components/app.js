@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Link } from "react-router-dom";
 
 import Navigation from "./navigation/navigation";
 import Content from "./navigation/page-content";
+import Footer from "./navigation/footer";
 
 
 export default class App extends Component {
@@ -23,6 +24,9 @@ export default class App extends Component {
           <h1>Welcome to My Shopping Website. Hope you get a great user-experience!</h1>
           <Navigation />
           <Content />
+
+          <Footer />
+
           
         </BrowserRouter>
         
