@@ -1,4 +1,24 @@
 .carousel-wrapper {
+    display: flex;
     height: 40vh;
     border: 2px solid;
 }
+
+.spacer {
+    height: 3vh;
+}
+
+.body {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+}
+
+.mask-pic {
+    height: 25vh;
+    border: 1px solid;
+    width: 15vw;
+}
+
+
+

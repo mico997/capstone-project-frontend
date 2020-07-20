@@ -13,6 +13,9 @@ export default class Home extends Component {
             </div>
 
 
+            <div className="spacer">
+                
+            </div>
 
             <Body/>
 
@@ -21,6 +24,10 @@ export default class Home extends Component {
 
 
                 <h2>This is the footer!!</h2>
+
+                <div class="copyright-wrapper">
+                    &copy; 2020 Mask4All &#124; All rights reserved
+                </div>
 
 
 
