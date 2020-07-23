@@ -70,7 +70,7 @@ export default function Footer() {
         
             <div className="footer">
                 <h2>This is the footer!!</h2>
-                <div class="copyright-wrapper">
+                <div className="copyright-wrapper">
                     &copy; 2020 Mask4All &#124; All rights reserved
                 </div>
             </div>

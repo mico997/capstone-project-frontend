@@ -3,27 +3,35 @@ import { BrowserRouter, Route, Link } from "react-router-dom";
 
 
 import Navigation from "./navigation/navigation";
-import Content from "./navigation/page-content";
+import Content from "./navigation/nav-link-routes";
 import Footer from "./navigation/footer";
+import Body from "./pages/home-body";
 
 
 export default class App extends Component {
   constructor() {
-    super()
+    super();
 
-     this.state = {
-          LoggedInStatus: "NOT_LOGGED_IN"
-      }
-}
+    this.state = {
+      loggedInStatus: "NOT_LOGGED_IN"
+    }
+  }
+  
   render() {
     return (
       <div className='container'>
-        {this.state.LoggedInStatus}
         <BrowserRouter>
-
-          <h1>Welcome to My Shopping Website. Hope you get a great user-experience!</h1>
+          {this.state.loggedInStatus}
           <Navigation />
           <Content />
+
+
+
+          <Body />
+
+
+        
+
 
           <Footer />
 

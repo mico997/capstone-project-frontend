@@ -20,15 +20,15 @@ export default function Content() {
        <div>
            <Switch>
                <Route exact path="/" component={Home} />
-               <Route exact path="/login" component={Login} />
-               <Route exact path="/register" component={Register} />
-               <Route exact path="/cart" component={Cart} />
-               <Route exact path="/my-account" component={Account} />
-               <Route exact path="/notifications" component={Notifications} />
-               <Route exact path="/sell" component={Sell} />
-               <Route exact path="/about" component={About} />
-               <Route exact path="/electronics" component={Electronics} />
-               <Route exact path="/n95mask" component={N95Mask} />
+               <Route  path="/login" component={Login} />
+               <Route  path="/register" component={Register} />
+               <Route  path="/cart" component={Cart} />
+               <Route  path="/my-account" component={Account} />
+               <Route  path="/notifications" component={Notifications} />
+               <Route  path="/sell" component={Sell} />
+               <Route  path="/about" component={About} />
+               <Route  path="/electronics" component={Electronics} />
+               <Route  path="/n95mask" component={N95Mask} />
            </Switch>
            
        </div>
