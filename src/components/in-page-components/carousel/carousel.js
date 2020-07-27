@@ -14,7 +14,17 @@ import Super from '../../../../static/assets/n95-super-mask-set.jpg'
 
 
 
-const landingData = [Cover, Cool, Yahh, Unique, Special, Respirator, Coverage, New, Super]
+const landingData = [
+    { title: Cover}, 
+    {title: Cool},
+    { title: Yahh }, 
+    { title: Unique }, 
+    { title: Special},
+    { title: Respirator},
+    { title: Coverage }, 
+    { title: New }, 
+    { title: Super}
+];
 
 
 const LeftArrow = () => {
@@ -44,6 +54,12 @@ export default class Carousel extends Component {
              length: landingData.length
               
           }
+
+
+          this.goToNextSlide=this.goToNextSlide.bind(this)
+          this.goToPrevSlide=this.goToPrevSlide.bind(this)
+
+        
    }
 
    goToPrevSlide() {
@@ -83,11 +99,15 @@ export default class Carousel extends Component {
            <div className='main-carousel-wrapper'>
 
                <div className="carousel-wrapper">
-                   <a className="carousel-arrow" onClick={this.props.goToPrevSlide}><LeftArrow /> </a> 
+                   <LeftArrow 
+                        goToPrevSlide={() => this.goToPrevSlide()}
+                   />    
 
                <Slider />
 
-                   <a className="carousel-arrow" onClick={this.props.goToNextSlide}><RightArrow /> </a>
+                   <RightArrow 
+                        goToNextSlide={() => this.goToNextSlide()}
+                    />    
 
 
 

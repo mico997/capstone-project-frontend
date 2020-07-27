@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { Component } from 'react';
 
 
 
-export default function Landing (props) {
+export default class Slide extends Component {
    return (
        <div className=''>
            
