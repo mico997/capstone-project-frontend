@@ -15,19 +15,32 @@ library.add(faChevronLeft, faChevronRight)
 
 
 export default class App extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     this.state = {
       loggedInStatus: "NOT_LOGGED_IN"
     }
+    this.handleSuccesfulLogin = this.handleSuccesfulLogin.bind(this)
+    this.handleUnSuccesfulLogin = this.handleUnSuccesfulLogin.bind(this)
+  }
+
+  handleSuccesfulLogin() {
+    this.setState({
+      loggedInStatus: "LOGGED_IN"
+    })
+  }
+
+  handleUnSuccesfulLogin() {
+    this.setState({
+      loggedInStatus: "NOT_LOGGED_IN"
+    })
   }
 
   render() {
     return (
       <div className='container'>
         <BrowserRouter>
-          {this.state.loggedInStatus}
           <Navigation />
           <Content />
 

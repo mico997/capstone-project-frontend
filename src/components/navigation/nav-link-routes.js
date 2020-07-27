@@ -16,7 +16,16 @@ export default function Content() {
        <div>
            <Switch>
                <Route exact path="/" component={Home} />
-               <Route  path="/login" component={Auth} />
+               <Route  
+                    path="/login" 
+                    render={props => (
+                        <Auth 
+                            {...props}
+                            handleSuccesfulLogin={props.handleSuccesfulLogin}
+                            handleUnSuccesfulLogin={props.handleUnSuccesfulLogin}
+                        />
+                    )} 
+                    />
                <Route  path="/register" component={Register} />
                <Route  path="/cart" component={Cart} />
                <Route  path="/about" component={About} />

@@ -33,6 +33,11 @@ export default function Navigation() {
                 </div>
 
 
+                
+           </div>
+
+           <div className="right-side">
+
                 <div className="nav-link-wrapper">
                     <NavLink to="/login" activeClassName="active-nav-link">
                         Login
@@ -44,17 +49,6 @@ export default function Navigation() {
                         Register
                     </NavLink>
                 </div>
-           </div>
-
-           <div className="right-side">
-
-               <div>
-                   <button>Sign Up</button>
-               </div>
-
-               <div>
-                   <button>Log In</button>
-               </div>
 
            </div>
         </div>

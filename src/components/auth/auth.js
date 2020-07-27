@@ -1,4 +1,5 @@
-import React, { Component} from 'react'
+import React, { Component} from 'react';
+import axios from 'axios';
 import Cookies from "js-cookie";
 
 
@@ -56,10 +57,9 @@ export default class Auth extends Component {
             this.setState({ errorMessage: "mismatched passwords" })
         }
         else {
-            fetch("https://new-capstone-backend-mvkt.herokuapp.com", {
-                method: "POST",
-                headers: { "content-type": "application/json" },
-                body: JSON.stringify({
+            axios.post("https://new-capstone-backend-mvkt.herokuapp.com/user/create", 
+            {
+                Profile: {
                     first_name: this.state.firstName,
                     last_name: this.state.lastName,
                     email: this.state.email,
@@ -71,9 +71,9 @@ export default class Auth extends Component {
                     city: this.state.city,
                     state: this.state.state,
                     zipCode: this.state.zipCode,
-
-                })
-            })
+                }
+            },
+            )
             .then(response => response.json())
             .then(data => {
                 console.log(data)
@@ -101,32 +101,29 @@ export default class Auth extends Component {
             this.setState({ errorMessage: "blank field" })
         }
         else {
-            fetch("https://new-capstone-backend-mvkt.herokuapp.com", {
-                method: "POST",
-                headers: {"content-type": "application/json"},
-                body: JSON.stringify({
+            axios.post("https://new-capstone-backend-mvkt.herokuapp.com/user/verification", 
+            {
+                User: {
                     username: this.state.usernameInput,
                     password: this.state.passwordInput
-                })
-            })
-            .then(response => response.json())
-            .then(data => {
-                console.log(data)
-
-                if (data === "User Not Verified") {
-                    this.setState({ errorMessage: "not verified" })
-                    
                 }
-                else {
-                    this.setState({ errorMessage: "none" })
-                    Cookies.set("username", this.state.usernameInput)
-                    this.props.history.push("/")
+            },
+            { withCredentials: true }
+            )
+            .then(response => {
+                if (response.data.status === "created") {
+                  console.log("You can come in...");
+                } else {
+                  this.setState({
+                    errorText: "Wrong email or password"
+                  });
                 }
-            })
-            .catch(error => {
-                console.log(error)
-                this.setState({ errorMessage: "fetch error" })
-            })
+              })
+              .catch(error => {
+                this.setState({
+                  errorText: "An error occurred"
+                });
+              });
         }
         
 
