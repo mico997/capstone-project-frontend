@@ -1,5 +1,8 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import Body from "../in-page-Components/home-body";
 
+
+import Carousel from "../in-page-components/carousel/carousel";
 
 
 export default class Home extends Component {
@@ -7,16 +10,13 @@ export default class Home extends Component {
     
    render() {
     return (
-        <div className="main-carousel-wrapper">
+        <div>
             <h1>Home</h1>
+            <Carousel />
 
-            <div className="carousel-wrapper">
-                <p>Leave this space empty for carousel!</p>
-            </div>
+            <Body />
             
-
         </div>
-
     )
    }
 }

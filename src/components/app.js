@@ -1,11 +1,17 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route, Link } from "react-router-dom";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronLeft, faChevronRight } from "@fortawesome/free-solid-svg-icons";
+
+
 
 
 import Navigation from "./navigation/navigation";
 import Content from "./navigation/nav-link-routes";
 import Footer from "./navigation/footer";
-import Body from "./pages/home-body";
+
+library.add(faChevronLeft, faChevronRight)
 
 
 export default class App extends Component {
@@ -16,7 +22,7 @@ export default class App extends Component {
       loggedInStatus: "NOT_LOGGED_IN"
     }
   }
-  
+
   render() {
     return (
       <div className='container'>
@@ -25,19 +31,11 @@ export default class App extends Component {
           <Navigation />
           <Content />
 
-
-
-          <Body />
-
-
-        
-
+          
 
           <Footer />
-
           
         </BrowserRouter>
-        
       </div>
     );
   }

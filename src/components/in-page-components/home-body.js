@@ -9,7 +9,11 @@ import Coverage from '../../../static/assets/n95-respirator-face-mask.jpg'
 import New from '../../../static/assets/n95-new-mask.jpg'
 import Super from '../../../static/assets/n95-super-mask-set.jpg'
 
-export default function Body() {
+
+
+export default function Body(props) {
+
+
 
 
    return (

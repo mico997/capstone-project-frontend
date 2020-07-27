@@ -1,0 +1,13 @@
+.register-page-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: calc(100vh - 51px);
+
+    .left-side {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #f6f6f6;
+    }
+
+}

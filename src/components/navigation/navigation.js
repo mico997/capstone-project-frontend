@@ -2,6 +2,7 @@ import React from 'react';
 import { NavLink } from "react-router-dom";
 
 export default function Navigation() {
+
    return (
        <div className="nav-wrapper">
            <div className="left-side">
@@ -17,11 +18,7 @@ export default function Navigation() {
                     </NavLink>
                 </div>
                 
-                <div className="nav-link-wrapper">
-                    <NavLink to="/electronics" activeClassName="active-nav-link">
-                        Electronics
-                    </NavLink>
-                </div>
+                
 
                 <div className="nav-link-wrapper">
                     <NavLink to="/n95mask" activeClassName="active-nav-link">
@@ -35,23 +32,6 @@ export default function Navigation() {
                     </NavLink>
                 </div>
 
-                <div className="nav-link-wrapper">
-                    <NavLink to="/my-account" activeClassName="active-nav-link">
-                        My-Account
-                    </NavLink>
-                </div>
-
-                <div className="nav-link-wrapper">
-                    <NavLink to="/notifications" activeClassName="active-nav-link"> 
-                        Notification
-                    </NavLink>
-                </div>
-
-                <div className="nav-link-wrapper">
-                    <NavLink to="/sell" activeClassName="active-nav-link">
-                        Sell
-                    </NavLink>
-                </div>
 
                 <div className="nav-link-wrapper">
                     <NavLink to="/login" activeClassName="active-nav-link">

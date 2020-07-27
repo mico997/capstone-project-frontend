@@ -1,11 +1,35 @@
-import React, { Component} from 'react'
+import React, { Component} from 'react';
 
-export default class Login extends Component {
-    render() {
-        return (
-            <div>
-                <h1>Login and gain access to your account here! </h1>
-            </div>
-        )
-       }
-}
+
+export default function Login(props) {
+
+       return (
+           <div className=''>
+               <h1>LOGIN TO ACCESS YOUR DASHBOARD</h1>
+               <form onSubmit={props.handleLoginSubmit}>
+                   <input
+                    type="username" 
+                    name="usernameInput"
+                    placeholder="Enter Username Here"
+                    value={props.usernameInput}
+                    onChange={props.handleChange}
+                   />
+
+                   <input 
+                    type="password" 
+                    name="passwordInput"
+                    placeholder="Enter Password Here"
+                    value={props.passwordInput}
+                    onChange={props.handleChange}
+
+                   />
+
+                   <div>
+                       <button type="submit">Login</button>
+                       <p onClick={props.handleClick}>Don't have an account? Click here to sign up!</p>
+                   </div>
+               </form>
+                
+           </div>
+       )
+   }
