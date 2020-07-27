@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Body from "../in-page-Components/home-body";
+import Body from "../in-page-components/home-body";
 
 
 import Carousel from "../in-page-components/carousel/carousel";
