@@ -57,7 +57,7 @@ export default class Auth extends Component {
             this.setState({ errorMessage: "mismatched passwords" })
         }
         else {
-            axios.post("https://new-capstone-backend-mvkt.herokuapp.com/user/create", 
+            axios.post("https://new-capstone-backend-mvkt.herokuapp.com", 
             {
                 Profile: {
                     first_name: this.state.firstName,
@@ -95,6 +95,7 @@ export default class Auth extends Component {
 
 
     handleLoginSubmit(event) {
+        
         event.preventDefault();
 
         if (this.state.usernameInput === "" || this.state.passwordInput === "") {

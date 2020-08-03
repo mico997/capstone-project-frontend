@@ -4,6 +4,11 @@
     height: calc(100vh - 51px);
 
 
+    h2 {
+        font-size: 1em;
+    }
+
+
     .left-column {
         background-size: cover;
     }
@@ -14,4 +19,8 @@
         align-items: center;
         background-color: #f6f6f6;
     }
+}
+
+.login {
+    padding: 8em;
 }

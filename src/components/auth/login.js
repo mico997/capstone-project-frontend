@@ -4,8 +4,8 @@ import React, { Component} from 'react';
 export default function Login(props) {
 
        return (
-           <div className=''>
-               <h1>LOGIN TO ACCESS YOUR DASHBOARD</h1>
+           <div className='login'>
+               <h2>LOGIN TO ACCESS YOUR DASHBOARD</h2>
                <form onSubmit={props.handleLoginSubmit}>
                    <input
                     type="username" 
