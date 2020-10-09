@@ -1,11 +1,13 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
 
 export default class Cart extends Component {
-    render() {
-        return (
-            <div>
-                <h1>View Your Cart!</h1>
-            </div>
-        )
-       }
+  render() {
+    return (
+      <div>
+        <div className="top-navigation">
+          <h1>Cart!</h1>
+        </div>
+      </div>
+    );
+  }
 }

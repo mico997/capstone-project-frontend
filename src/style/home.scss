@@ -1,13 +1,11 @@
-
-
 .spacer {
-    height: 3vh;
+  height: 3vh;
 }
 
 .body {
-    display: flex;
-    justify-content: space-between;
-    padding: 40px;
+  display: flex;
+  justify-content: space-between;
+  padding: 40px;
 }
 
 .carousel-wrapper {
@@ -18,9 +16,8 @@
   align-items: center;
 
   a {
-      font-size: xx-large;
-      cursor: pointer;
-      
+    font-size: xx-large;
+    cursor: pointer;
   }
 }
 
@@ -37,19 +34,10 @@
 .square {
   height: 25vh;
   width: 15vw;
-
- 
 }
 
-
-
-.img-wrapper img{
+.img-wrapper img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-
-
-
-
-

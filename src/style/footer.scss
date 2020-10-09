@@ -1,25 +1,15 @@
 .footer-wrapper {
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  line-height: 100px;
+
+  .copyright-wrapper {
     display: flex;
-    flex-direction: column;
-
-    
-    
-    
-    
-    
-    
-    .copyright-wrapper {
-        display: flex;
-        flex-direction: column-reverse;
-        justify-content: center;
-        align-items: center;
-        margin-bottom: 2px;
-    }
-
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    color: grey;
+    margin-bottom: 2px;
+  }
 }
-    
-
-
-
-
-
